@@ -64,3 +64,7 @@ git add .
 git commit -m "Add framework files"
 git push -uf origin master
 ```
+
+### symfony raamistiku kasutamise reeglid
+* Loo route ehk URL sinu lehele (tee): selleks failist config/routes.yaml defineeri tee, mis soovid kasutada.
+* Loo kontroller - see on funktsioon, mis valmib sinu lehe.
