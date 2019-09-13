@@ -85,3 +85,8 @@ class SinuController
 +      * @Route("/tee/antud/kontrollerini")
 +      */
 ```
+### Twig mallimoorori kasutamine
+#### Installeerimine
+```
+composer require "twig/twig:^2.0"
+```
