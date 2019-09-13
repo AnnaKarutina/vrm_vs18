@@ -68,3 +68,20 @@ git push -uf origin master
 ### symfony raamistiku kasutamise reeglid
 * Loo route ehk URL sinu lehele (tee): selleks failist config/routes.yaml defineeri tee, mis soovid kasutada.
 * Loo kontroller - see on funktsioon, mis valmib sinu lehe.
+
+### Suuna ehk Route määramisvõimalused
+Kui ei soovi iga kord routes.yaml failis suunad kirjeldada, kasuta anatatsioonid:
+```
+composer require annotations
+```
+ja koodis rakenda nii:
+```
+// ...
+use Symfony\Component\Routing\Annotation\Route;
+
+class SinuController
+{
++     /**
++      * @Route("/tee/antud/kontrollerini")
++      */
+```
