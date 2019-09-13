@@ -120,3 +120,20 @@ DATABASE_URL=mysql://kasutajanimi:parool@127.0.0.1:3306/tulevaandmebaasinimi
 ```
 php bin/console doctrine:database:create
 ```
+* tabelite loomine
+
+    * Loo tuleva tabeli struktuuriga PHP klass [https://symfonycasts.com/screencast/symfony-doctrine/create-entity#play](https://symfonycasts.com/screencast/symfony-doctrine/create-entity#play)
+Vajalik anotatsioonide kirjeldused: [https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/tutorials/getting-started.html#getting-started-with-doctrine](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/tutorials/getting-started.html#getting-started-with-doctrine)
+    * Valmista vastav entity
+    ```
+    php bin/console make:entity
+    ```
+    * Loo migratsioon
+    ```
+        php bin/console make:migration
+    ```
+    * Loo migratsioon
+     ```
+        php bin/console doctrine:migrations:migrate
+     ```
+ 
