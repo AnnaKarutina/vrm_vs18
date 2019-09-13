@@ -90,3 +90,33 @@ class SinuController
 ```
 composer require "twig/twig:^2.0"
 ```
+### Andmebaasi kasutamine
+* MySQL andmebaasi serveri installeerimine
+```
+sudo apt-get install mysql-server
+```
+* MySQL seadistamine
+```
+sudo mysql_secure_installation
+```
+* MySQL mitte-root kasutaja loomine
+```
+mysql>CREATE USER 'kasutajanimi'@'localhost' IDENTIFIED BY 'kasutajaparool';
+mysql>GRANT ALL PRIVILEGES ON *.* TO 'kasutajanimi'@'localhost';
+mysql>FLUSH PRIVILEGES;
+```
+### DBAL ja symfony
+Täielik dokumentatsioon on [https://symfonycasts.com/screencast/symfony-doctrine/install](siin)
+ 
+* composer
+```
+composer require doctrine
+```
+* .env failis:
+```
+DATABASE_URL=mysql://kasutajanimi:parool@127.0.0.1:3306/tulevaandmebaasinimi
+```
+* andmebaasi loomine
+```
+php bin/console doctrine:database:create
+```
