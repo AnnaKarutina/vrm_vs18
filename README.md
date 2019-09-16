@@ -136,4 +136,7 @@ Vajalik anotatsioonide kirjeldused: [https://www.doctrine-project.org/projects/d
      ```
         php bin/console doctrine:migrations:migrate
      ```
- 
+ * andmete salvestamine
+    * Lähtuvalt andmebaasis oleva olemusega (entitiy), loo kontrolleris sellega seotud objekt
+    * Määra vajalikud väärtused antud objekti kaudu, mis plaanid andmebaasi salvestada
+    * Võta kasutusele ```EntityManagerInterface```, mille abil salvesta andmed andmebaasi
